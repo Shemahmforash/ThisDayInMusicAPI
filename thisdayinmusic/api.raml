@@ -10,21 +10,40 @@ version: v1
 mediaType: application/json
 protocols: [HTTP]
 
-/items:
-    displayName: Collection of items
+/artists:
+    displayName: Collection of artists
     get:
-        description: Get all item
+        description: Get all artist
     post:
-        description: Create a new item
+        description: Create a new artist
         body:
             application/json:
-                schema: !include items.json
+                schema: !include schemas/artists.json
 
     /{id}:
-        displayName: Collection-item
+        displayName: Collection-artist
         get:
-            description: Get a particular item
+            description: Get a particular artist
         delete:
-            description: Delete a particular item
+            description: Delete a particular artist
         patch:
-            description: Update a particular item
+            description: Update a particular artist
+
+/tracks:
+    displayName: Collection of tracks
+    get:
+        description: Get all track
+    post:
+        description: Create a new track
+        body:
+            application/json:
+                schema: !include schemas/tracks.json
+
+    /{id}:
+        displayName: Collection-track
+        get:
+            description: Get a particular track
+        delete:
+            description: Delete a particular track
+        patch:
+            description: Update a particular track
