@@ -17,6 +17,16 @@
         "description": {
             "required": false,
             "type": "text"
+        },
+        "events": {
+            "required": false,
+            "type": "relationship",
+            "args": {
+                "document": "Event",
+                "ondelete": "NULLIFY",
+                "backref_name": "track",
+                "backref_ondelete": "NULLIFY"
+            }
         }
     }
 }

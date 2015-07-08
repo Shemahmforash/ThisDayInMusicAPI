@@ -10,6 +10,25 @@ version: v1
 mediaType: application/json
 protocols: [HTTP]
 
+/events:
+    displayName: Collection of events
+    get:
+        description: Get all event
+    post:
+        description: Create a new event
+        body:
+            application/json:
+                schema: !include schemas/events.json
+
+    /{id}:
+        displayName: Collection-event
+        get:
+            description: Get a particular event
+        delete:
+            description: Delete a particular event
+        patch:
+            description: Update a particular event
+
 /artists:
     displayName: Collection of artists
     get:
