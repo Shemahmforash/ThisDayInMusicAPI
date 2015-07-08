@@ -29,25 +29,6 @@ protocols: [HTTP]
         patch:
             description: Update a particular event
 
-/artists:
-    displayName: Collection of artists
-    get:
-        description: Get all artist
-    post:
-        description: Create a new artist
-        body:
-            application/json:
-                schema: !include schemas/artists.json
-
-    /{id}:
-        displayName: Collection-artist
-        get:
-            description: Get a particular artist
-        delete:
-            description: Delete a particular artist
-        patch:
-            description: Update a particular artist
-
 /tracks:
     displayName: Collection of tracks
     get:
@@ -66,3 +47,22 @@ protocols: [HTTP]
             description: Delete a particular track
         patch:
             description: Update a particular track
+
+/artists:
+    displayName: Collection of artists
+    get:
+        description: Get all artist
+    post:
+        description: Create a new artist
+        body:
+            application/json:
+                schema: !include schemas/artists.json
+
+    /{id}:
+        displayName: Collection-artist
+        get:
+            description: Get a particular artist
+        delete:
+            description: Delete a particular artist
+        patch:
+            description: Update a particular artist

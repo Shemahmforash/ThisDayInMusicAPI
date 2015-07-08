@@ -18,6 +18,16 @@
             "required": false,
             "type": "text"
         },
+        "tracks": {
+            "required": false,
+            "type": "relationship",
+            "args": {
+                "document": "Track",
+                "ondelete": "NULLIFY",
+                "backref_name": "artist",
+                "backref_ondelete": "NULLIFY"
+            }
+        },
         "events": {
             "required": false,
             "type": "relationship",

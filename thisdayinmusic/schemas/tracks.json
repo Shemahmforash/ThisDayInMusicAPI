@@ -18,6 +18,15 @@
             "required": false,
             "type": "text"
         },
+        "artist_id": {
+            "required": false,
+            "type": "foreign_key",
+            "args": {
+                "ref_document": "Artist",
+                "ref_column": "artist.id",
+                "ref_column_type": "id_field"
+            }
+        },
         "events": {
             "required": false,
             "type": "relationship",
