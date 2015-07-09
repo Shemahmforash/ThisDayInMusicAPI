@@ -48,6 +48,26 @@ protocols: [HTTP]
         patch:
             description: Update a particular track
 
+/playlists:
+    displayName: Collection of playlists
+    get:
+        description: Get all playlist
+    post:
+        description: Create a new playlist
+        body:
+            application/json:
+                schema: !include schemas/playlists.json
+
+    /{id}:
+        displayName: Collection-playlist
+        get:
+            description: Get a particular playlist
+        delete:
+            description: Delete a particular playlist
+        patch:
+            description: Update a particular playlist
+
+
 /artists:
     displayName: Collection of artists
     get:
@@ -66,3 +86,4 @@ protocols: [HTTP]
             description: Delete a particular artist
         patch:
             description: Update a particular artist
+
